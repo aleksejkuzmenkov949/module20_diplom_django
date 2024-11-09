@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Выход{% endblock %}
+
+{% block content %}
+    <h2>Вы уверены, что хотите выйти?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Выйти</button>
+    </form>
+    <a href="{% url 'note_list' %}">Назад к заметкам</a>
+{% endblock %}
